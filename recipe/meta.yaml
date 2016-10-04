@@ -1,4 +1,4 @@
-{% set version = "0.10.3" %}
+{% set version = "0.11" %}
 
 package:
     name: rasterstats
@@ -6,8 +6,8 @@ package:
 
 source:
     fn: rasterstats-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
-    sha256: 7a4a79d71fbfb15812ee40081a8fd321039e9b26f389f7ec456c657c3298a818
+    url: https://github.com/perrygeo/python-rasterstats/archive/{{ version }}.tar.gz
+    sha256: 0de3487986cb43f19613c653c170091d42b6f460aa7f3270f1646955faf6d5dd
 
 build:
     number: 0
@@ -23,7 +23,9 @@ requirements:
         - shapely
         - numpy >=1.9
         - rasterio >=0.27
+        - cligj >=0.4
         - fiona
+        - simplejson
         - gdal 2.1.*
 
 test:
