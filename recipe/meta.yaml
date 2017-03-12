@@ -1,4 +1,4 @@
-{% set version = "0.11" %}
+{% set version = "0.12.0" %}
 
 package:
   name: rasterstats
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: rasterstats-{{ version }}.tar.gz
-  url: https://github.com/perrygeo/python-rasterstats/archive/{{ version }}.tar.gz
-  sha256: 0de3487986cb43f19613c653c170091d42b6f460aa7f3270f1646955faf6d5dd
+  url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
+  sha256: ec202b0b405f4f2cff9ab0e1ba06625512eb82a631a56a0f15e434d24d5dcb8f
 
 build:
   number: 0
