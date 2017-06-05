@@ -27,6 +27,8 @@ requirements:
     - simplejson
 
 test:
+  files:
+    - reference.py
   imports:
     - rasterstats
   commands:
