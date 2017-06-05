@@ -10,7 +10,7 @@ source:
   sha256: ec202b0b405f4f2cff9ab0e1ba06625512eb82a631a56a0f15e434d24d5dcb8f
 
 build:
-  number: 0
+  number: 1
   preserve_egg_dir: True
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -26,7 +26,6 @@ requirements:
     - cligj >=0.4
     - fiona
     - simplejson
-    - gdal 2.1.*
 
 test:
   imports:
