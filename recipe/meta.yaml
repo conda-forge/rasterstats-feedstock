@@ -5,13 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  fn: rasterstats-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
   sha256: ec202b0b405f4f2cff9ab0e1ba06625512eb82a631a56a0f15e434d24d5dcb8f
 
 build:
-  number: 1
-  preserve_egg_dir: True
+  number: 2
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
