@@ -14,9 +14,7 @@ Summary: Summarize geospatial raster datasets based on vector geometries.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/rasterstats-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rasterstats-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/rasterstats-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/rasterstats-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/rasterstats-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/rasterstats-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/rasterstats-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/rasterstats-feedstock)
 
 Current release info
 ====================
