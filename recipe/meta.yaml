@@ -1,4 +1,4 @@
-{% set version = "0.12.0" %}
+{% set version = "0.12.1" %}
 
 package:
   name: rasterstats
@@ -6,17 +6,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
-  sha256: ec202b0b405f4f2cff9ab0e1ba06625512eb82a631a56a0f15e434d24d5dcb8f
+  sha256: fc472a24770102934f7c229dd25644bda758ab570a11e94da83d66b510ef5995
 
 build:
-  number: 2
+  number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - shapely
