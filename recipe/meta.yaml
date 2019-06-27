@@ -9,9 +9,9 @@ source:
   sha256: 5600e58a80d9968a1afa8e25fc06e1e54cdfa7d078cb239db574b23167d0f0de
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -35,9 +35,9 @@ test:
 
 about:
   home: https://github.com/perrygeo/python-raster-stats
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Summarize geospatial raster datasets based on vector geometries.'
+  summary: 'Summarize geospatial raster datasets based on vector geometries'
 
 extra:
   recipe-maintainers:
