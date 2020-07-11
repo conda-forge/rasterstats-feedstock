@@ -5,7 +5,7 @@ Home: https://github.com/perrygeo/python-raster-stats
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Summarize geospatial raster datasets based on vector geometries
 

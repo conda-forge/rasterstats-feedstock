@@ -1,4 +1,4 @@
-{% set version = "0.14.0" %}
+{% set version = "0.15.0" %}
 
 package:
   name: rasterstats
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
-  sha256: b7b19c620934e8f7c81b1c5456ade63673831cd1e02c7361514b5bf1d08c23e4
+  sha256: d554fbc7e749e5649dfcdbd7ea8e21c7388437bc66ef13fde9ef3662a258b277
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   home: https://github.com/perrygeo/python-raster-stats
   license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Summarize geospatial raster datasets based on vector geometries'
+  summary: Summarize geospatial raster datasets based on vector geometries
 
 extra:
   recipe-maintainers:
