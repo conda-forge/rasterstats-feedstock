@@ -14,11 +14,11 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - shapely
     - numpy >=1.9
     - rasterio >=0.27
