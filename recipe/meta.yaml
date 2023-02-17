@@ -1,39 +1,44 @@
-{% set version = "0.17.1" %}
+{% set name = "rasterstats" %}
+{% set version = "0.18.0" %}
 
 package:
-  name: rasterstats
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/r/rasterstats/rasterstats-{{ version }}.tar.gz
-  sha256: 849ea975620260f7c3304b6d2d958bcca4507adb52e2199641b2147da04373be
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rasterstats-{{ version }}.tar.gz
+  sha256: 29389bfcbeac1a4206aba6e1d795058ec8a64d560efad48156c27fad97c2e09a
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
+    - setuptools >=61
     - pip
   run:
-    - python >=3.6
+    - python >=3.7
     - affine <3.0
-    - shapely
+    - click >7.1
+    - cligj >=0.4
+    - fiona <1.9
     - numpy >=1.9
     - rasterio >=1.0
-    - cligj >=0.4
-    - click >7.1
-    - fiona <1.9
     - simplejson
+    - shapely
 
 test:
   imports:
     - rasterstats
   commands:
+    - pip check
     - rio zonalstats --help
     - rio pointquery --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/perrygeo/python-raster-stats
