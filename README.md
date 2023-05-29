@@ -1,11 +1,11 @@
-About rasterstats
-=================
+About rasterstats-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rasterstats-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/perrygeo/python-raster-stats
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rasterstats-feedstock/blob/main/LICENSE.txt)
 
 Summary: Summarize geospatial raster datasets based on vector geometries
 
