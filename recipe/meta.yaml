@@ -1,5 +1,5 @@
 {% set name = "rasterstats" %}
-{% set version = "0.18.0" %}
+{% set version = "0.19.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rasterstats-{{ version }}.tar.gz
-  sha256: 29389bfcbeac1a4206aba6e1d795058ec8a64d560efad48156c27fad97c2e09a
+  sha256: 066c44feb6f3936804a0c79d112271fa5bf5de0d5058823ab5c1e0047ab7bbbc
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - affine <3.0
+    - affine
     - click >7.1
     - cligj >=0.4
-    - fiona <1.9
+    - fiona
     - numpy >=1.9
     - rasterio >=1.0
     - simplejson
