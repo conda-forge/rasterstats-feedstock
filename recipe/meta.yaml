@@ -1,5 +1,5 @@
 {% set name = "rasterstats" %}
-{% set version = "0.19.0" %}
+{% set version = "0.20.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rasterstats-{{ version }}.tar.gz
-  sha256: 066c44feb6f3936804a0c79d112271fa5bf5de0d5058823ab5c1e0047ab7bbbc
+  sha256: 5b8ee775e815727767e0d359c03f3dd1c7840876d1d1d0c7a5a88ecf3e492938
 
 build:
   noarch: python
