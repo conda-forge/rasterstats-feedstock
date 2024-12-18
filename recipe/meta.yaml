@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rasterstats-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rasterstats-{{ version }}.tar.gz
   sha256: 5b8ee775e815727767e0d359c03f3dd1c7840876d1d1d0c7a5a88ecf3e492938
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=61
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - affine
     - click >7.1
     - cligj >=0.4
@@ -39,6 +39,7 @@ test:
     - rio pointquery --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/perrygeo/python-raster-stats
