@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  version: "0.21.0"
+
+package:
+  name: rasterstats
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/r/rasterstats/rasterstats-${{ version }}.tar.gz
+  sha256: 2b955f6775b7f641c8094d00bc4381492184ba162b5dba1baa69df8db98efa5f
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - affine
+    - click >7.1,!=8.2.1
+    - cligj >=0.4
+    - numpy >=1.9
+    - pyogrio
+    - rasterio >=1.0
+    - simplejson
+    - shapely
+    # optional :: [fiona]
+    - fiona
+
+tests:
+  - python:
+      imports:
+        - rasterstats
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Summarize geospatial raster datasets based on vector geometries
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
+  homepage: https://pypi.org/project/rasterstats/
+  documentation: https://pythonhosted.org/rasterstats/
+
+extra:
+  recipe-maintainers:
+    - perrygeo
+    - ocefpaf
