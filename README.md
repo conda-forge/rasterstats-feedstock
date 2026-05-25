@@ -3,11 +3,13 @@ About rasterstats-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rasterstats-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/perrygeo/python-raster-stats
+Home: https://pypi.org/project/rasterstats/
 
 Package license: BSD-3-Clause
 
 Summary: Summarize geospatial raster datasets based on vector geometries
+
+Documentation: https://pythonhosted.org/rasterstats/
 
 Current build status
 ====================
@@ -16,7 +18,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/rasterstats-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/rasterstats-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
